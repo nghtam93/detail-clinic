@@ -1,0 +1,62 @@
+[class^="icon-"], [class*=" icon-"] {
+    position: relative;
+    display: inline-block;
+    &:before{
+        content: '';
+        position: relative;
+        display: inline-block;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-size: contain;
+        background-color: #fff;
+        transition: color .5s;
+    }
+}
+.icon{
+    &-plusv2 {
+        &:before{
+            width: 24px;
+            height: 25px;
+            -webkit-mask-image: url(../img/icon-plusv2.svg);
+        }
+    }
+
+    &-tau {
+        &:before{
+            width: 29px;
+            height: 39px;
+            -webkit-mask-image: url(../img/icon-tau.svg);
+        }
+    }
+
+    &-car {
+        &:before{
+            width: 35px;
+            height: 28px;
+            -webkit-mask-image: url(../img/icon-car.svg);
+        }
+    }
+    &-home {
+        &:before{
+            width: 30px;
+            height: 30px;
+            -webkit-mask-image: url(../img/icon-home.svg);
+        }
+    }
+    &-picture {
+        &:before{
+            width: 39px;
+            height: 31px;
+            -webkit-mask-image: url(../img/icon-picture.svg);
+            background-color: #D1B828;
+        }
+    }
+    &-book {
+        &:before{
+            width: 39px;
+            height: 31px;
+            -webkit-mask-image: url(../img/icon-book.svg);
+            background-color: #D1B828;
+        }
+    }
+}

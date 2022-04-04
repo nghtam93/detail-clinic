@@ -1,0 +1,18 @@
+@keyframes stuckMoveDown{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(0)}
+}
+@keyframes stuckMoveUp{
+    0%{transform:translateY(100%)}
+    100%{transform:translateY(0)}
+}
+@keyframes stuckFadeIn{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+body.dn-home{
+    .header{
+        visibility: hidden;
+        animation-delay: 4s;
+    }
+}
