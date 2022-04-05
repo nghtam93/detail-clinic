@@ -126,8 +126,12 @@ br{
     }
 }
 @media (min-width: 1200px){
+
     .container {
         max-width: 1224px;
+    }
+    .container-1000{
+        max-width: 1024px;
     }
     .gx-xl-100{
         --bs-gutter-x: 100px;
