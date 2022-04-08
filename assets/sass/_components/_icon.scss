@@ -17,15 +17,15 @@
         &:before{
             width: 24px;
             height: 25px;
-            -webkit-mask-image: url(../img/ico_plusv2.svg);
+            -webkit-mask-image: url(../img/ico-plusv2.svg);
         }
     }
 
     &-tau {
         &:before{
-            width: 29px;
-            height: 39px;
-            -webkit-mask-image: url(../img/ico_tau.svg);
+            width: 28px;
+            height: 38px;
+            -webkit-mask-image: url(../img/ico-tau.svg);
         }
     }
 
@@ -33,21 +33,21 @@
         &:before{
             width: 35px;
             height: 28px;
-            -webkit-mask-image: url(../img/ico_car.svg);
+            -webkit-mask-image: url(../img/ico-car.svg);
         }
     }
     &-home {
         &:before{
             width: 30px;
             height: 30px;
-            -webkit-mask-image: url(../img/ico_home.svg);
+            -webkit-mask-image: url(../img/ico-home.svg);
         }
     }
     &-picture {
         &:before{
             width: 39px;
             height: 31px;
-            -webkit-mask-image: url(../img/ico_picture.svg);
+            -webkit-mask-image: url(../img/ico-picture.svg);
             background-color: #D1B828;
         }
     }
@@ -55,8 +55,42 @@
         &:before{
             width: 39px;
             height: 31px;
-            -webkit-mask-image: url(../img/ico_book.svg);
+            -webkit-mask-image: url(../img/ico-book.svg);
             background-color: #D1B828;
         }
     }
+    &-bullhorn {
+        &:before{
+            width: 36px;
+            height: 31px;
+            -webkit-mask-image: url(../img/ico-bullhorn.svg);
+            background-color: #D1B828;
+        }
+    }
+    &-pencil {
+        &:before{
+            width: 36px;
+            height: 36px;
+            -webkit-mask-image: url(../img/ico-pencil.svg);
+            background-color: #D1B828;
+        }
+    }
+    &-comment {
+        &:before{
+            width: 36px;
+            height: 32px;
+            -webkit-mask-image: url(../img/ico-comment.svg);
+            background-color: #D1B828;
+        }
+    }
+    &-right {
+        &:before{
+            width: 12px;
+            height: 12px;
+            -webkit-mask-image: url(../img/ico-right.svg);
+            background-color: #D1B828;
+        }
+    }
+
+
 }

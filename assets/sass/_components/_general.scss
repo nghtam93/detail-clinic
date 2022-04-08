@@ -5,6 +5,13 @@
     &.-small{
     	align-items: baseline;
     	margin-bottom: 28px;
+        i{
+            position: relative;
+            top: 3px;
+            width: 40px;
+            height: 52px;
+            margin-right: 12px;
+        }
     	.sc-header__title{
     		font-size: 40px;
     		line-height: normal;
@@ -15,12 +22,26 @@
     		font-size: 18px;
     		line-height: normal;
     		color: #D1B828;
-    		margin-bottom: 0;
+    		margin: 0;
     	}
     	.sc-header__hr{
+            position: relative;
+            bottom: 5px;
     		margin-left: 16px;
     		border-bottom: 1px dashed #D1B828;
     	}
+    }
+    &.-medium{
+        .sc-header{
+            &__title{
+                font-size: 52px;
+                line-height: 52px;
+            }
+            &__sub{
+                font-size: 25px;
+                line-height: 25px;
+            }
+        }
     }
     &__title{
     	font-family: 'Ephesis', cursive;
@@ -29,6 +50,7 @@
         color: rgba(209, 184, 40, .8);
     }
     &__sub{
+        font-family: "丸明Katura StdN R";
         margin-top: 20px;
         font-size: 45px;
         color: #5C504B;
@@ -38,6 +60,7 @@
         font-size: 20px;
         color: #5C504B;
     }
+
     @media (max-width:1599px){
 
     }
@@ -51,6 +74,24 @@
     }
     @media (max-width:575px){
 
+    }
+}
+
+.sc-readmore{
+    min-width: 190px;
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 0;
+    background-color: #3B3330;
+    &:hover{
+        background-color: #c2ac32;
+        color: #fff;
+    }
+    &.-small{
+        min-width: 100px;
+        padding: 9px 16px;
+        font-size: 15px;
     }
 }
 
@@ -68,4 +109,32 @@
     25%{top:100%;opacity:1}
     26%{top:100%;opacity:0}
     27%{top:-100%;opacity:0}
+}
+
+.schedule {
+    font-size: 16px;
+    line-height: normal;
+    .table{
+        color: #fff;
+        thead{
+            th{
+                font-weight: 400;
+            }
+        }
+        >:not(caption)>*>* {
+            padding: 8px;
+        }
+    }
+    .table>:not(:last-child)>:last-child>* {
+        border-bottom-color: #fff;
+    }
+    p{
+        line-height: normal;
+    }
+    @media ( max-width: 1399px ) {
+        font-size: 12px;
+        .table>:not(caption)>*>* {
+            padding: 6px;
+        }
+    }
 }

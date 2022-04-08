@@ -1,14 +1,19 @@
-
-// Component
-@import "_components/font";
+// ==========================================================================
+// Foundation
+// ==========================================================================
+@import "../libs/bootstrap/css/bootstrap.css";
 @import "_components/base";
+@import "_components/font";
 @import "_components/icon";
-@import "_components/menu";
-// @import "_components/breadcrumb";
-// @import "_components/navigation";
+@import "_components/general";
+// ==========================================================================
+// Layout
+// ==========================================================================
 @import "_components/header";
 @import "_components/footer";
+@import "_components/menu";
 
-// Page
-@import "_components/general";
+// -----------------------------------------------------------------
+// Project
+// -----------------------------------------------------------------
 @import "_pages/home";

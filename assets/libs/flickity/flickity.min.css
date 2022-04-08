@@ -21,5 +21,3 @@
 .flickity-rtl .flickity-page-dots{direction:rtl}
 .flickity-page-dots .dot{display:inline-block;width:10px;height:10px;margin:0 8px;background:#333;border-radius:50%;opacity:0.25;cursor:pointer}
 .flickity-page-dots .dot.is-selected{opacity:1}
-/*.flickity-enabled.is-fade .flickity-slider > *{pointer-events:none;z-index:0}
-.flickity-enabled.is-fade .flickity-slider > .is-selected{pointer-events:auto;z-index:1}*/

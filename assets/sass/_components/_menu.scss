@@ -6,15 +6,19 @@
 
 .main__nav{
     position:relative;
-    margin-top: -80px;
-    margin-bottom: 25px;
+    margin: -135px 0 25px;
+    padding: 40px 0;
     z-index:9;
     font-family: 'Noto Serif JP', serif;
     font-size: 20px;
+    transition: all .5s;
     &:after{
         content:"";
         display:table;
         clear:both;
+    }
+    &.is-hover{
+        background-color: rgba(0, 0, 0, .4);
     }
     .sc__wrap{
         position:relative;z-index:9999;width:100%;
@@ -36,7 +40,7 @@
         }
         &>li{
             position:relative;display:inline-block;
-            margin:0 30px;
+            padding:0 30px;
             a::before{
                 content:"";
                 position:absolute;

@@ -21,29 +21,10 @@ a:hover{text-decoration:none;}
 img{
     max-width: 100%;
 }
-br{
-    &.tb{
-        display:none
-    }
-    @media ( max-width: 991px ) {
-        &.pc{
-            display: none;
-        }
-    }
-    @media (min-width:768px) and (max-width:1199px){
-        &.tb{
-            display: block;
-        }
-    }
-    @media ( min-width: 576px ) {
-        &.mb{
-            display: none;
-        }
-    }
-}
+
 
 /**/
-.videoWrapper{position:relative;padding-bottom:56.25%; /* 16:9 */padding-top:25px;height:0;}
+.videoWrapper{position:relative;padding-bottom:56.25%; /* 16:9 */height:0;}
 .videoWrapper iframe,.videoWrapper object,.videoWrapper embed{position:absolute;top:0;left:0;width:100%;height:100%;}
 
 /* Text truncate */
@@ -67,13 +48,13 @@ br{
     position: relative;
     font-size: 20px;
     line-height: 1.2;
-    padding: 14px 40px;
-    border-color: #524945;
-    border-radius: 30px;
-    min-width: 295px;
+    padding: 14px 16px;
+    border-color: transparent;
+    border-radius: 0;
+    min-width: 190px;
     background-color: transparent;
     color: #524945;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: all 1s;
     overflow: hidden;
     &:hover{
@@ -116,13 +97,33 @@ br{
 
 
 /*Custom boostrap*/
-
+.maxw-1000{
+    max-width: 1000px;
+}
 @media (min-width:992px){
+    .col-lg-14{
+        width: 14%;
+    }
+    .col-lg-30{
+        width: 30%;
+    }
+    .col-lg-40{
+        width: 40%;
+    }
+    .col-lg-44{
+        width: 44%;
+    }
     .col-lg-45{
         width: 45%;
     }
     .col-lg-55{
         width: 55%;
+    }
+    .col-lg-60{
+        width: 60%;
+    }
+    .gx-lg-50{
+        --bs-gutter-x: 50px;
     }
 }
 @media (min-width: 1200px){
@@ -133,13 +134,36 @@ br{
     .container-1000{
         max-width: 1024px;
     }
+    .gx-xl-40{
+        --bs-gutter-x: 40px;
+    }
+    .gx-xl-50{
+        --bs-gutter-x: 50px;
+    }
+    .gx-xl-80{
+        --bs-gutter-x: 80px;
+    }
     .gx-xl-100{
         --bs-gutter-x: 100px;
     }
+    .col-md-20{
+        width: 20%;
+    }
 }
 @media ( min-width: 1400px ) {
+    .gx-xxl-50{
+        --bs-gutter-x: 50px;
+    }
     .gx-xxl-100{
         --bs-gutter-x: 100px;
+    }
+    .container-1400{
+        max-width: 1324px;
+    }
+}
+@media ( min-width: 1500px ) {
+    .container-1400{
+        max-width: 1424px;
     }
 }
 
