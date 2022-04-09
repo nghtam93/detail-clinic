@@ -91,6 +91,12 @@
             background-color: #D1B828;
         }
     }
-
+    &-top {
+        &:before{
+            width: 18px;
+            height: 18px;
+            -webkit-mask-image: url(../img/ico-arrow-up.svg);
+        }
+    }
 
 }

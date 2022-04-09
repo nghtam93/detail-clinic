@@ -3,15 +3,14 @@
 [ Main menu ]
 ======================================
 */
-
 .main__nav{
     position:relative;
-    margin: -135px 0 25px;
+    margin: -135px 0 0;
     padding: 40px 0;
     z-index:9;
     font-family: 'Noto Serif JP', serif;
     font-size: 20px;
-    transition: all .5s;
+    transition: background .5s;
     &:after{
         content:"";
         display:table;
@@ -19,6 +18,17 @@
     }
     &.is-hover{
         background-color: rgba(0, 0, 0, .4);
+    }
+    &.is-sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 300;
+        margin: 0;
+        padding: 20px 0;
+        background-color: rgba(0, 0, 0, .4);
+        animation:stuckMoveDown .6s;
     }
     .sc__wrap{
         position:relative;z-index:9999;width:100%;
