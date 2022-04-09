@@ -127,10 +127,6 @@ img{
     }
 }
 @media (min-width: 1200px){
-
-    .container {
-        max-width: 1224px;
-    }
     .container-1000{
         max-width: 1024px;
     }
@@ -148,6 +144,11 @@ img{
     }
     .col-md-20{
         width: 20%;
+    }
+}
+@media ( min-width: 1300px ) {
+    .container {
+        max-width: 1224px;
     }
 }
 @media ( min-width: 1400px ) {

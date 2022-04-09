@@ -33,6 +33,7 @@
 				}
 				&--2{
 					font-size: 32px;
+					margin-bottom: 0;
 				}
 				&--3{
 					font-size: 12px;
@@ -1192,18 +1193,20 @@
 				}
 			}
 			&__btn{
+				display: block;
 				flex: 0 0 auto;
 				position: relative;
 				padding: 10px 7px;
 				font-size: 15px;
 				background-color: #3B3330;
 				color: #FFFFFF;
+				transition: all .5s;
 				p{
 					background-color: #fff;
-			    font-size: 10px;
-			    color: #5C504B;
-			    border-radius: 30px;
-			    padding: 0 8px;
+				    font-size: 10px;
+				    color: #5C504B;
+				    border-radius: 30px;
+				    padding: 0 8px;
 				}
 				i{
 					&:before{
@@ -1211,6 +1214,9 @@
 						height: 10px;
 						background-color: #fff;
 					}
+				}
+				&:hover{
+					background-color: #d1b828;
 				}
 			}
 		}
@@ -1386,7 +1392,52 @@
 		&-greeting {
 		    position: relative;
 		    padding: 80px 0 100px;
-
 		}
+		&-info{
+			.el-logo {
+			    left: 0;
+			    width: 100%;
+				&__text--1 {
+				    font-size: 18px;
+				}
+			    &__text--2 {
+				    font-size: 22px;
+				}
+			}
+
+			.schedule {
+			    font-size: 14px;
+			}
+			.el-info{
+				max-width: 340px;
+			    a {
+				    font-size: 40px;
+				}
+			}
+			.el-center .el-header {
+			    font-size: 20px;
+			}
+		}
+		&-blognew {
+		    padding: 80px 0 40px;
+		}
+		&-clinic{
+			background-color: rgba(209,184,40,0.35);
+			.sc-wrap::before{
+				display: none;
+			}
+		}
+	}
+
+	@media ( max-width: 1299px ) {
+		&-outline{
+			.sc-wrap {
+			    padding: 60px 40px;
+			    &::after {
+				    display: none;
+				}
+			}
+		}
+
 	}
 }
