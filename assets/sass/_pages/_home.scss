@@ -1893,6 +1893,9 @@
 		}
 		&-blognew {
 		    padding: 60px 0 0;
+		   	.el-box {
+				    margin-bottom: 30px;
+				}
 		}
 		&-outline {
 		    padding: 30px 0px 10px;
@@ -2034,6 +2037,7 @@
 			.sc-content__thumb {
 			    position: relative;
 			    top: 0;
+			    width: 50%;
 			    margin: 0 0 15px auto;
 			}
 			.sc-header__sub {
