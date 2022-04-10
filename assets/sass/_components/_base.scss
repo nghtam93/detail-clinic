@@ -68,6 +68,10 @@ img{
 
 
     @media ( max-width: 1299px ) {
+        font-size: 16px;
+        padding: 12px 16px;
+    }
+    @media ( max-width: 1299px ) {
 
     }
     @media ( max-width: 575px ) {
@@ -99,6 +103,14 @@ img{
 /*Custom boostrap*/
 .maxw-1000{
     max-width: 1000px;
+}
+@media (min-width:576px){
+    .col-sm-30{
+        width: 30%;
+    }
+    .col-sm-40{
+        width: 40%;
+    }
 }
 @media (min-width:992px){
     .col-lg-14{
@@ -147,7 +159,7 @@ img{
     }
 }
 @media ( min-width: 1300px ) {
-    .container {
+    .container{
         max-width: 1224px;
     }
 }
@@ -160,6 +172,9 @@ img{
     }
     .container-1400{
         max-width: 1324px;
+    }
+    .container-xxl {
+        max-width: 1224px;
     }
 }
 @media ( min-width: 1500px ) {

@@ -1,8 +1,11 @@
-.is-header-sticky{
-    .logo__thumb.-fix {
-        position: fixed;
-        top: 10px;
-        width: 90px;
-        animation:stuckMoveDown 1s;
+@media ( min-width: 1200px ) {
+    .is-header-sticky{
+        .logo__thumb.-fix {
+            position: fixed;
+            top: 10px;
+            width: 90px;
+            animation:stuckMoveDown 1s;
+        }
     }
+
 }
