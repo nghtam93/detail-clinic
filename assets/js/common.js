@@ -55,21 +55,8 @@ jQuery(function($) {
         /*=====  End of Back to top  ======*/
 
 
-        /*============================
-        =            Menu            =
-        ============================*/
-
-        $( ".main__nav li" ).hover(
-          function() {
-            $( '.main__nav' ).addClass('is-hover')
-          }, function() {
-            $( '.main__nav' ).removeClass('is-hover')
-          }
-        );
-
-
         //-------------------------------------------------
-        // Menu
+        // Menu Mobile
         //-------------------------------------------------
         $.fn.dnmenu = function( options ) {
 
@@ -144,6 +131,14 @@ jQuery(function($) {
 
         new WOW().init();
         if($('body').hasClass( "home" )){
+
+            $( ".main__nav li" ).hover(
+              function() {
+                $( '.main__nav' ).addClass('is-hover')
+              }, function() {
+                $( '.main__nav' ).removeClass('is-hover')
+              }
+            );
 
             var home_slider_top=$(".home-navmb"),
             offset=200,duration=500;

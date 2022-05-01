@@ -1,11 +1,14 @@
+//mixin
+@import "_mixin/base";
 // ==========================================================================
 // Foundation
 // ==========================================================================
 @import "../libs/bootstrap/css/bootstrap.css";
-@import "_components/base";
 @import "_components/font";
+@import "_components/base";
 @import "_components/icon";
 @import "_components/general";
+@import "_components/effect";
 @import "_components/animate";
 // ==========================================================================
 // Layout
@@ -18,3 +21,4 @@
 // Project
 // -----------------------------------------------------------------
 @import "_pages/home";
+@import "_pages/service";

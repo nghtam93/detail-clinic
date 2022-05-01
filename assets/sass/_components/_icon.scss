@@ -11,6 +11,11 @@
         background-color: #fff;
         transition: color .5s;
     }
+    &.-white{
+        &:before{
+            background-color: #fff;
+        }
+    }
 }
 .icon{
     &-plusv2 {
@@ -38,8 +43,8 @@
     }
     &-home {
         &:before{
-            width: 30px;
-            height: 30px;
+            width: 20px;
+            height: 20px;
             -webkit-mask-image: url(../img/ico-home.svg);
         }
     }
@@ -103,6 +108,22 @@
             width: 20px;
             height: 20px;
             -webkit-mask-image: url(../img/ico-close.svg);
+        }
+    }
+    &-pc{
+        &:before{
+            width: 55px;
+            height: 48px;
+            -webkit-mask-image: url(../img/ico-pc.svg);
+            background-color: #5C504B;
+        }
+    }
+    &-phone{
+        &:before{
+            width: 46px;
+            height: 46px;
+            -webkit-mask-image: url(../img/ico-phone.svg);
+            background-color: #5C504B;
         }
     }
 

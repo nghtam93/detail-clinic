@@ -1,11 +1,102 @@
-@media ( min-width: 1200px ) {
-    .is-header-sticky{
-        .logo__thumb.-fix {
-            position: fixed;
-            top: 10px;
-            width: 90px;
-            animation:stuckMoveDown 1s;
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width:100%;
+    z-index: 10;
+    padding: 10px 0;
+    transition: all .5s;
+    background-color: rgba(92, 80, 75, .8);
+    &.-fix{
+        position: fixed;
+    }
+    &.is-sticky{
+        top: 0;
+        background: rgba(92, 80, 75, .8);
+        box-shadow: 0 0 10px #ccc;
+    }
+
+    .logo{
+        color: #fff;
+        transition: opacity .5s;
+        animation: lightAnimation 1.5s ease-in-out infinite;
+        display: inline-block;
+        &__thumb{
+            width: 63px;
+            height: 56px;
+        }
+        &__text{
+            line-height: normal;
+            &--1{
+                font-size: 13px;
+            }
+            &--2{
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            &--3{
+                font-size: 7px;
+                @include letter-spacing(230);
+            }
+        }
+        img{
+            width: auto;
+            max-height: 56px;
+            transition: all .5s;
+        }
+    }
+    &-web__btn{
+        display: block;
+        flex: 0 0 auto;
+        position: relative;
+        padding: 10px 7px;
+        font-size: 15px;
+        background-color: #3B3330;
+        color: #FFFFFF;
+        transition: all .5s;
+        p{
+            background-color: #fff;
+            font-size: 10px;
+            color: #5C504B;
+            border-radius: 30px;
+            padding: 0 8px;
+        }
+        i{
+            &:before{
+                width: 6px;
+                height: 10px;
+                background-color: #fff;
+            }
+        }
+        &:hover{
+            color: #fff;
+            background-color: #d1b828;
         }
     }
 
+
+    @media (max-width: 1399px){
+
+
+    }
+    @media (max-width: 1299px){
+
+    }
+    @media (max-width: 1199px){
+
+    }
+    @media (max-width: 991px){
+
+    }
+
+    @media (max-width: 575px){
+        .logo__text--2 {
+            font-size: 16px;
+        }
+    }
+}
+@keyframes stuckMoveDown{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(0)}
 }
