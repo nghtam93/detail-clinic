@@ -104,7 +104,7 @@
     }
     &__sub{
         font-family: "丸明Katura StdN R";
-        margin-top: 20px;
+        // margin-top: 20px;
         font-size: 45px;
         color: #5C504B;
         @include letter-spacing(120);
@@ -117,36 +117,44 @@
     @media (max-width:1599px){
         &__title {
             font-size: 80px;
-            line-height: 90px;
-        }
-    }
-    @media (max-width:1199px){
-        &__title {
-            font-size: 60px;
-            line-height: 66px;
+            line-height: normal;
         }
         &__sub {
-            font-size: 40px;
+            font-size: 38px;
         }
         &__excerpt {
             font-size: 18px;
         }
+    }
+    @media (max-width:1399px){
         &.-page{
             .sc-header__title {
                 font-size: 60px;
                 line-height: 60px;
             }
             .sc-header__sub {
-                font-size: 40px;
+                font-size: 36px;
                 line-height: 40px;
             }
         }
+    }
+    @media (max-width:1199px){
+        &__title {
+            font-size: 60px;
+            line-height: normal;
+        }
+        &__sub {
+            font-size: 34px;
+        }
+        &__excerpt {
+            font-size: 16px;
+        }
+
     }
 
     @media (max-width:991px){
         &__title {
             font-size: 48px;
-            line-height: 52px;
         }
         &__sub {
             font-size: 32px;
@@ -157,7 +165,6 @@
         &.-medium{
             .sc-header__title {
                 font-size: 42px;
-                line-height: 50px;
             }
             .sc-header__sub {
                 font-size: 22px;
@@ -182,7 +189,6 @@
         &.-page{
             .sc-header__title {
                 font-size: 48px;
-                line-height: 52px;
             }
             .sc-header__sub {
                 font-size: 32px;
@@ -201,7 +207,9 @@
         }
     }
     @media (max-width:575px){
-
+        &__sub {
+            font-size: 24px;
+        }
         &.-small {
             text-align: center;
         }
@@ -212,6 +220,12 @@
             }
             .sc-header__sub {
                 font-size: 20px;
+            }
+        }
+        &.-page{
+            .sc-header__sub {
+                font-size: 26px;
+                line-height: 32px;
             }
         }
     }

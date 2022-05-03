@@ -10,6 +10,17 @@ $color_secondary: #FF6B1D;
 
 body{
     color:#5C504B;font:14px/1.8 'Noto Sans JP', sans-serif;
+    --header-height:86px;
+    --container: 1224px;
+    --container-space: calc( (100vw - var(--container) ) );
+    --container-half-space: calc( var(--container-space)/2 );
+
+    @media (max-width: 1199px){
+        --container: 960px;
+    }
+    @media (max-width: 991px){
+        --container: 720px;
+    }
 }
 ul,ol{list-style:none;padding:0;margin-bottom:0}
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{line-height:normal;}
@@ -157,6 +168,9 @@ img{
     .gx-xl-100{
         --bs-gutter-x: 100px;
     }
+    .gx-xl-120{
+        --bs-gutter-x: 100px;
+    }
     .col-xl-20{
         width: 20%;
     }
@@ -178,6 +192,9 @@ img{
     }
     .container-1100{
         max-width: 1124px;
+    }
+    .container-1300{
+        max-width: 1324px;
     }
     .container-1400{
         max-width: 1324px;

@@ -43,6 +43,7 @@
     }
     &-home {
         &:before{
+            top: 2px;
             width: 20px;
             height: 20px;
             -webkit-mask-image: url(../img/ico-home.svg);

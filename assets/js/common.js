@@ -1,4 +1,9 @@
 jQuery(function($) {
+
+    new WOW().init({
+        animateClass: 'animated'
+    });
+
     $(document).ready(function(){
 
         /*=====================================
@@ -129,7 +134,7 @@ jQuery(function($) {
 
 
 
-        new WOW().init();
+
         if($('body').hasClass( "home" )){
 
             $( ".main__nav li" ).hover(
