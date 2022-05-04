@@ -1,0 +1,276 @@
+.clinic{
+	&-intro{
+		padding: 0 0 140px;
+		background-color: #FBF7E1;
+		.el__excerpt{
+			font-family: "丸明Katura StdN R";
+			font-size: 24px;
+			line-height: 47px;
+			@include letter-spacing(50);
+			margin-bottom: 80px;
+		}
+		.flickity {
+		    --arrow-space: -80px;
+		    &-button{
+		    	background: transparent;
+		    	svg{
+		    		fill: #C2AC32;
+		    	}
+		    }
+		    &-prev-next-button {
+			    transform: none;
+			    top: calc( (68.075%/2) + 22px );
+			}
+		}
+		.carousel{
+			&-nav{
+				--bs-gutter-x: 20px;
+				.slider-item__thumb{
+					border:2px solid transparent;
+					transition: all .25s;
+				}
+				.slider-item__wrap{
+					&.is-selected{
+						.slider-item__thumb{
+							border-color: #C2AC32;
+						}
+					}
+				}
+			}
+		}
+		.slider-item{
+			margin-bottom: 50px;
+			&__meta{
+				margin-top: 30px;
+			}
+			&__title{
+				font-size: 26px;
+				line-height: normal;
+				color: #C2AC32;
+			}
+			&__excerpt{
+				font-size: 16px;
+				@include letter-spacing(50);
+			}
+		}
+	}
+
+	&-facilities{
+		padding: 100px 0 0;
+		.el-box{
+			&:not(:last-child){
+				padding-bottom: 150px;
+			}
+			&__title{
+				padding: 13px 10px;
+				background-color: #E7F0FB;
+				font-family: "丸明Katura StdN R";
+				font-size: 36px;
+				@include letter-spacing(50);
+				margin-bottom: 70px;
+			}
+			&__sub{
+				font-family: "丸明Katura StdN R";
+				font-size: 26px;
+				@include letter-spacing(50);
+				margin-bottom: 60px;
+			}
+			&__content{
+				padding: 0 50px;
+				&.-s2{
+					padding: 0 175px;
+				}
+			}
+
+		}
+		.el-item{
+			+ .el-item{
+				margin-top: 50px;
+			}
+			&__thumb{
+				flex: 0 0 auto;
+				width: 35%;
+				margin-right: 60px;
+			}
+			&__meta{
+				flex-grow: 1;
+			}
+			&__title{
+				font-size: 26px;
+				color: #609EE5;
+				margin-bottom: 16px;
+			}
+			&__excerpt{
+				color: #5C504B;
+				font-size: 16px;
+				line-height: 34px;
+				@include letter-spacing(50);
+			}
+
+			&.-s2{
+				margin-bottom: 60px;
+				.el-item{
+					&__thumb{
+						width: 100%;
+					}
+				}
+			}
+		}
+		.el-text{
+			margin-top: 60px;
+			padding: 40px 70px;
+			background-color: #FBF7E1;
+			&__title{
+				font-family: "丸明Katura StdN R";
+				font-size: 26px;
+				color: #C2AC32;
+				@include letter-spacing(50);
+			}
+			&__excerpt{
+				font-size: 16px;
+				line-height: 34px;
+				@include letter-spacing(50);
+			}
+		}
+	}
+	@media (max-width:1199px){
+		&-intro{
+    		padding: 0 0 100px;
+			.flickity {
+			    --arrow-space: 10px;
+			}
+			.flickity-button {
+			    background: hsla(0,0%,100%,0.75);
+			}
+		}
+		&-facilities{
+			.el-box:not(:last-child) {
+			    padding-bottom: 100px;
+			}
+			.el-box__title {
+			    padding: 12px 10px;
+			    font-size: 28px;
+			    margin-bottom: 50px;
+			}
+			.el-box__sub {
+			    font-size: 22px;
+			    line-height: 32px;
+			    margin-bottom: 40px;
+			}
+			.el-item__thumb {
+			    margin-right: 40px;
+			}
+			.el-item__title {
+			    font-size: 22px;
+			    color: #609EE5;
+			    margin-bottom: 16px;
+			}
+			.el-box__content.-s2 {
+			    padding: 0 120px;
+			}
+		}
+	}
+	@media (max-width:991px){
+		&-intro{
+    		padding: 0 0 80px;
+			.el__excerpt {
+			    font-size: 20px;
+			    line-height: 36px;
+			    margin-bottom: 60px;
+			}
+		}
+		&-facilities {
+		    padding: 80px 0 0;
+		    .el-box:not(:last-child) {
+			    padding-bottom: 80px;
+			}
+			.el-box__title {
+			    font-size: 24px;
+			}
+
+		   	.el-item+.el-item {
+			    margin-top: 30px;
+			}
+		    .el-item__thumb {
+			    margin-right: 30px;
+			}
+			.el-item__title {
+			    font-size: 20px;
+			    margin-bottom: 10px;
+			}
+			.el-item__excerpt {
+			    font-size: 14px;
+			    line-height: 28px;
+			}
+			.el-text {
+				&__title {
+				    font-size: 22px;
+				}
+			    padding: 40px 40px;
+			}
+
+			.el-box__content.-s2 {
+			    padding: 0 60px;
+			}
+			.el-item.-s2 {
+			    margin-bottom: 40px;
+			}
+		}
+	}
+
+	@media (max-width:767px){
+		&-intro{
+			padding: 0 0 60px;
+			.el__excerpt {
+			    font-size: 18px;
+			    line-height: 30px;
+			    margin-bottom: 40px;
+			    letter-spacing: .025em;
+			}
+		}
+		&-facilities {
+		    padding: 60px 0 0;
+		    .el-box__content {
+			    padding: 0;
+			    &.-s2 {
+				    padding: 0;
+				}
+			}
+		}
+
+	}
+	@media (max-width:575px){
+		&-intro{
+			.carousel-nav {
+			    --bs-gutter-x: 10px;
+			}
+			.slider-item {
+			    margin-bottom: 30px;
+			}
+			.slider-item__title {
+			    font-size: 22px;
+			}
+			.slider-item__excerpt {
+			    font-size: 14px;
+			}
+		}
+		&-facilities{
+			.el-box__title {
+			    font-size: 20px;
+			    margin-bottom: 40px;
+			}
+			.el-item__thumb {
+			    width: 100%;
+			        margin: 0 0 15px;
+			}
+			.el-text {
+			    padding: 40px 20px;
+			    .el-text__excerpt {
+				    font-size: 14px;
+				    line-height: 28px;
+				}
+			}
+
+		}
+	}
+}

@@ -1,0 +1,296 @@
+.access{
+	&-intro{
+		position: relative;
+		padding: 0 0 100px;
+		--container: 1218px;
+		.el__title{
+			font-size: 20px;
+			color: #5C504B;
+			@include letter-spacing(50);
+			margin-bottom: 80px;
+		}
+		.el-box{
+			padding-bottom:90px;
+			&__thumb{
+				margin-bottom: 30px;
+				.dnfix__thumb{
+					padding-top:100%;
+				}
+			}
+			&__meta{
+				position: relative;
+				padding: 50px 30px 100px;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: calc( ( 100vw - var(--container) )/2 + 100% );
+					height: 100%;
+					background: #FBF7E1;
+					z-index: -1;
+					pointer-events: none;
+				}
+			}
+			&__title{
+				font-family: "丸明Katura StdN R";
+				font-size: 30px;
+				color: #5C504B;
+				@include letter-spacing(50);
+				margin-bottom: 30px;
+			}
+			&__access{
+				font-size: 18px;
+				color: #5C504B;
+				@include letter-spacing(50);
+				i{
+					width: 50px;
+					&:before {
+						top: 5px;
+					    background-color: #5C504B;
+					}
+				}
+				li{
+					padding-bottom: 20px;
+					margin-bottom: 20px;
+					&:not(:last-child){
+						border-bottom: 1px dotted #D1B828;
+					}
+				}
+				.-title{
+					font-family: "丸明Katura StdN R";
+					font-size: 21px;
+					color: #C2AC32;
+				}
+
+			}
+
+		}
+
+		.el__text{
+			margin-bottom: 70px;
+			font-size: 20px;
+			@include letter-spacing(50);
+		}
+
+		.el__bar{
+
+			border: 1px solid #5C504B;
+			&--left{
+				flex: 0 0 auto;
+				width: 66%;
+				font-family: "丸明Katura StdN R";
+				font-size: 25px;
+				line-height: normal;
+				padding: 20px 10px;
+				background-color: #62CC96;
+				color: #fff;
+				@include letter-spacing(50);
+			}
+			&--right{
+				font-size: 18px;
+				line-height: normal;
+				padding: 20px 10px;
+			}
+		}
+
+	}
+
+	&-outline{
+		position: relative;
+		padding: 100px 0;
+		--container: 1218px;
+		.el-list{
+			position: relative;
+			margin-top: 100px;
+			padding: 50px 100px 100px;
+			&:before{
+				content: '';
+				position: absolute;
+				top: -50px;
+				left: -65px;
+				width: 100%;
+				height: 100%;
+				border: 1px solid #D1B828;
+				z-index: -1;
+				pointer-events: none;
+			}
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: calc( ( 100vw - var(--container) )/2 + 100% );
+				height: 100%;
+				background: #FBF7E1;
+				z-index: -2;
+				pointer-events: none;
+			}
+
+
+
+			font-size: 18px;
+			color: rgba(92, 80, 75, .85);
+			a{
+				color: rgba(92, 80, 75, .85);
+			}
+			li{
+				display: flex;
+				&:not(:last-child){
+					border-bottom: 1px dashed #D1B828;
+				}
+			}
+			&__label, &__value{
+				padding: 16px 0;
+				@include letter-spacing(50);
+			}
+			&__label{
+				flex: 0 0 auto;
+				width: 180px;
+				margin-right: 20px;
+				font-family: "丸明Katura StdN R";
+				font-size: 20px;
+				color: #D1B828;
+			}
+			&__value{
+				flex-grow: 1;
+			}
+
+
+		}
+	}
+	@media (max-width:1399px){
+		&-intro{
+			padding-bottom: 60px;
+			.el-box {
+			    padding-bottom: 50px;
+			}
+		}
+		&-outline{
+			padding: 80px 0;
+			.el-list:before {
+			    top: -30px;
+			    left: -30px;
+			}
+		}
+	}
+	@media (max-width:1199px){
+		&-intro{
+			--container: 936px;
+			.el-box__meta::before {
+			}
+			.el__bar--left {
+			    font-size: 22px;
+			    padding: 20px 10px;
+			}
+			.el__bar--right {
+			    font-size: 16px;
+			    line-height: normal;
+			    padding: 20px 10px;
+			}
+		}
+		&-outline{
+			--container: 936px;
+			.el-list {
+			    margin-top: 80px;
+			    padding: 50px 60px 100px;
+			   	&:before {
+				    top: -30px;
+				    left: -14px;
+				}
+				&__label {
+				    width: 160px;
+				    font-size: 18px;
+				}
+			}
+		}
+	}
+	@media (max-width:991px){
+		&-intro{
+    		padding-bottom: 20px;
+
+			.el-box__meta {
+			    padding: 50px 30px;
+			    &::before {
+				    width: 100%;
+				}
+			}
+			.el__bar--left{
+				width: 100%;
+			}
+		}
+		&-outline{
+
+			.el-list {
+			    margin-top: 80px;
+			    padding: 50px 40px;
+			    font-size: 16px;
+			    &::after {
+				    width: 100%;
+				}
+				&__label {
+				    width: 120px;
+				    font-size: 16px;
+				}
+			}
+
+		}
+
+	}
+	@media (max-width:575px){
+		&-intro{
+			.el-box__title {
+			    font-size: 24px;
+			    margin-bottom: 20px;
+			}
+			.el__title {
+			    font-size: 14px;
+			    margin-bottom: 40px;
+			}
+			.el-box__access {
+			    font-size: 14px;
+			}
+			.el__text {
+			    margin-bottom: 40px;
+			    font-size: 16px;
+			}
+			.el__bar--left {
+			    font-size: 18px;
+			    padding: 20px 10px;
+			}
+		}
+		&-outline {
+		    padding: 60px 0;
+		    .el-list{
+		    	&:before {
+				    top: -20px;
+				    left: -8px;
+				}
+				li {
+				    display: block;
+				}
+		    }
+		    .el-list {
+			    margin-top: 60px;
+			    padding: 40px 20px;
+			    font-size: 14px;
+
+			    li{
+			    	&:not(:last-child){
+			    		margin-bottom: 10px;
+			    	}
+			    }
+			    &__label {
+				    width: 100%;
+				    padding:0 0;
+				}
+				&__value {
+				    padding: 4px 0 8px!important;
+				}
+			}
+
+
+		}
+
+	}
+}

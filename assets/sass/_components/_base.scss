@@ -21,6 +21,9 @@ body{
     @media (max-width: 991px){
         --container: 720px;
     }
+    @media (max-width: 767px){
+        --container: 540px;
+    }
 }
 ul,ol{list-style:none;padding:0;margin-bottom:0}
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{line-height:normal;}
@@ -90,26 +93,60 @@ img{
     }
 }
 
-/* Fade CSS */
-.flickity--fade {
-    >.flickity-viewport>.flickity-slider{
-        transform: none !important;
-        >.slider__item__wrap{
+/*flickity*/
+.flickity{
+    --arrow-space: 10px;
+    &:not(.flickity-enabled) .slider-item__wrap + .slider-item__wrap {
+        display: none;
+    }
+    &:not(.-full) {
+        --bs-gutter-x: 30px;
+        margin-right: calc(var(--bs-gutter-x) * -.5);
+        margin-left: calc(var(--bs-gutter-x) * -.5);
+        .slider-item__wrap{
             padding-right: calc(var(--bs-gutter-x) * .5);
             padding-left: calc(var(--bs-gutter-x) * .5);
-            left: 0 !important;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-            z-index: -1;
-            &.is-selected {
-              opacity: 1;
-              z-index: 0
+        }
+
+        @media (max-width:767px){
+            .flickity-slider {
+                transition: all .1s;
             }
         }
     }
+    &-button{
+        &.previous{
+            left: var(--arrow-space);
+        }
+        &.next{
+            right: var(--arrow-space);
+        }
+    }
 
+    /* Fade CSS */
+    &--fade {
+        >.flickity-viewport>.flickity-slider{
+            transform: none !important;
+            >.slider__item__wrap{
+                padding-right: calc(var(--bs-gutter-x) * .5);
+                padding-left: calc(var(--bs-gutter-x) * .5);
+                left: 0 !important;
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                z-index: -1;
+                &.is-selected {
+                  opacity: 1;
+                  z-index: 0
+                }
+            }
+        }
+    }
+    @media (max-width:575px){
+        &:not(.-full) {
+            --bs-gutter-x: 10px;
+        }
+    }
 }
-
 
 /*Custom boostrap*/
 .maxw-1000{
@@ -150,11 +187,11 @@ img{
     }
 }
 @media (min-width: 1200px){
-    .container-1100{
-        max-width: 1124px;
-    }
     .container-1000{
         max-width: 1024px;
+    }
+    .container-1100{
+        max-width: 1124px;
     }
     .gx-xl-40{
         --bs-gutter-x: 40px;
@@ -178,6 +215,9 @@ img{
 @media ( min-width: 1300px ) {
     .container{
         max-width: 1224px;
+    }
+    .container-1000{
+        max-width: 1024px;
     }
     .container-1100{
         max-width: 1124px;

@@ -150,6 +150,18 @@
             font-size: 16px;
         }
 
+        &.-page{
+            .sc-header__wrap:before, .sc-header__wrap:after {
+                width: 18%;
+            }
+            .sc-header__wrap:before{
+                left: 0;
+            }
+            .sc-header__wrap:after {
+                right: 0;
+            }
+        }
+
     }
 
     @media (max-width:991px){
