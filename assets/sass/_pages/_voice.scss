@@ -1,0 +1,229 @@
+.voice{
+	&-intro{
+		position: relative;
+		padding: 0px 0 90px;
+		background-color: #FBF7E1;
+		.sc-wrap{
+			padding-top: 60px;
+		}
+
+		.el__header{
+			position: relative;
+			z-index: 1;
+			&:before, &:after {
+			    content: '';
+			    position: absolute;
+			    top: 50%;
+			    transform: translateY(-50%);
+			    width: 226px;
+			    height: 70px;
+			    z-index: -1;
+			    background-repeat: no-repeat;
+			    background-size: contain;
+			    pointer-events: none;
+			    animation: 4s ease-in-out infinite lightAnimation;
+			}
+			&:before {
+			    left: 0;
+			    background-image: url(../img/ttl_service_left.png);
+			}
+			&:after {
+			    right: 0;
+			    background-image: url(../img/ttl_service_right.png);
+			    animation-delay: 2s;
+			}
+
+			&__title{
+				font-family: "丸明Katura StdN R";
+				font-size: 36px;
+				line-height: 63px;
+				@include letter-spacing(50);
+				margin-bottom: 40px;
+				color: #C2AC32;
+			}
+
+		}
+
+		.el__excerpt{
+			font-size: 16px;
+			color: #5C504B;
+			p{
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&-content{
+		padding: 80px 0;
+		.el-box{
+			position: relative;
+			&:not(:last-child){
+				margin-bottom: 80px;
+			}
+			&.-no-title{
+				padding-top: 62px;
+			}
+
+			&:nth-child(4n + 2){
+				.el-box__meta{
+					background-color:#E7F7EF;
+				}
+				.el-box__title, .el-box__label p{
+					color: #62CC96;
+				}
+
+
+			}
+			&:nth-child(4n + 3){
+				.el-box__meta{
+					background-color:#FCF2F4;
+				}
+				.el-box__title, .el-box__label p{
+					color: #E57C8F;
+				}
+
+			}
+			&:nth-child(4n + 4){
+				.el-box__meta{
+					background-color:#E7F0FB;
+				}
+				.el-box__title, .el-box__label p{
+					color: #609EE5;
+				}
+
+			}
+			&__meta{
+				padding: 50px;
+				background-color:#FCEDE6;
+			}
+			&__label{
+				position: absolute;
+			    top: -30px;
+			    left: -50px;
+			    width: 169px;
+			    height: 134px;
+			    background-image: url(../img/comment-bg.png);
+			    background-repeat: no-repeat;
+			    background-size: contain;
+
+			    display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			    justify-content: center;
+
+			    text-align: center;
+			    font-family: "丸明Katura StdN R";
+			    font-size: 26px;
+			    line-height: normal;
+			    color: #5C504B;
+			    p{
+			    	font-size: 43px;
+			    	line-height: 43px;
+			    	color: #EB8957;
+			    }
+			}
+			&__title{
+				margin-left: 140px;
+				font-family: "丸明Katura StdN R";
+				font-size: 24px;
+				line-height: 42px;
+				color: #EB8957;
+				margin-bottom: 20px;
+				@include letter-spacing(120);
+			}
+			&__excerpt{
+				font-size: 16px;
+				line-height: 34px;
+				@include letter-spacing(50);
+			}
+			&__thumb{}
+		}
+	}
+
+	@media ( max-width: 1199px ) {
+		&-content{
+			.el-box__label {
+				top: -10px;
+			    left: -12px;
+			    width: 140px;
+			    height: 110px;
+			    font-size: 18px;
+			    p {
+				    font-size: 36px;
+				    line-height: 36px;
+				}
+			}
+
+		}
+	}
+	@media ( max-width: 991px ) {
+		&-intro{
+			padding: 0px 0 40px;
+			.el__header__title {
+			    font-size: 28px;
+			    line-height: 40px;
+			}
+		}
+	}
+	@media ( max-width: 767px ) {
+		&-content{
+			.el-box__title {
+			    font-size: 20px;
+			    line-height: 24px;
+    			margin-left: 120px;
+			}
+			.el-box__label {
+			    left: -12px;
+			    width: 120px;
+			    height: 95px;
+			    font-size: 16px;
+			    p {
+				    font-size: 30px;
+				    line-height: 36px;
+				}
+			}
+
+			.el-box__excerpt {
+			    font-size: 14px;
+			    line-height: 30px;
+			}
+		}
+	}
+
+	@media ( max-width: 575px ) {
+		&-intro{
+			padding: 0px 0 20px;
+			.sc-wrap {
+			    padding-top: 20px;
+			}
+			.el__header__title {
+			    font-size: 22px;
+			    line-height: 30px;
+			    margin-bottom: 20px;
+			}
+		}
+		&-content {
+		    padding: 60px 0 20px;
+		    .el-box__meta {
+			    padding: 20px;
+			}
+			.el-box:not(:last-child) {
+			    margin-bottom: 60px;
+			}
+			.el-box__title {
+			    margin-left: 100px;
+			}
+			.el-box__label {
+			    left: -8px;
+			    width: 100px;
+			    height: 80px;
+			    font-size: 14px;
+
+			    p {
+				    font-size: 26px;
+				    line-height: 36px;
+				}
+			}
+		}
+	}
+}
