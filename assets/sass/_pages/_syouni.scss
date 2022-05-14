@@ -1,0 +1,336 @@
+.syouni{
+	&-intro{
+
+	}
+
+	&-about{
+		padding: 110px 0 130px;
+		background: #FBF7E1;
+		.el-items{
+			padding: 0 50px;
+		}
+		.el-item{
+			position: relative;
+			&:not(:last-child){
+				margin-bottom: 80px;
+			}
+			&__title{
+				font-family: "丸明Katura StdN R";
+				font-size: 36px;
+				line-height: 63px;
+				color: #E57C8F;
+				@include letter-spacing(50);
+			}
+			&__label{
+				position: relative;
+				display: inline-block;
+				padding: 9px 10px;
+				margin: -22px 24px 0 -75px;
+			    min-width: 202px;
+			    text-align: center;
+				background: rgba(229, 124, 143, .8);
+				color: #fff;
+			}
+			&__excerpt{
+				font-size: 16px;
+				line-height: 34px;
+				@include letter-spacing(50);
+			}
+
+			&.-s2{
+				.el-item__title{
+					color: #EB8957;
+				}
+				.el-item__label{
+					background: rgba(235, 137, 87, .8);
+				}
+			}
+			&.-s3{
+				.el-item__title{
+					color: #62CC96;
+				}
+				.el-item__label{
+					background: rgba(97, 204, 149, .8);
+				}
+			}
+			&.-s4{
+				.el-item__title{
+					color: #C2AC32;
+				}
+				.el-item__label{
+					background: rgba(194, 172, 50, .8);
+				}
+			}
+
+
+		}
+	}
+
+	&-conditions{
+		padding: 120px 0 60px;
+
+		.el__title{
+			font-size: 22px;
+			line-height: 42px;
+			@include letter-spacing(50);
+			margin-bottom: 50px;
+		}
+		.el__excerpt{
+			margin-top: 20px;
+			font-family: "丸明Katura StdN R";
+			font-size: 24px;
+			line-height: 42px;
+			@include letter-spacing(120);
+		}
+		.el-item{
+			width: 280px;
+			height: 280px;
+			padding: 30px 20px;
+			margin: 0 auto;
+			text-align: center;
+			background: #E7F0FB;
+			border-radius: 50%;
+			margin-bottom: 40px;
+			&__number{
+				width: 66px;
+				margin: 0 auto;
+				font-size: 36px;
+				line-height: 34px;
+				border-bottom: 1px dashed;
+				@include letter-spacing(50);
+				padding-bottom: 10px;
+				margin-bottom: 20px;
+			}
+			&__title{
+				font-family: "丸明Katura StdN R";
+				font-size: 30px;
+				line-height: 38px;
+				color: #609EE5;
+				@include letter-spacing(50);
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&-eating{
+		padding:100px 0 60px;
+	}
+	&-fluorine{
+		padding:100px 0 200px;
+		.el-item{
+			margin-bottom: 120px;
+		}
+		.el-box{
+			border: 1px solid #C2AC32;
+			padding: 50px 100px;
+			&:not(:last-child){
+				margin-bottom: 120px;
+			}
+			&__title{
+				font-family: "丸明Katura StdN R";
+				position: relative;
+				font-size: 36px;
+				line-height: 63px;
+				@include letter-spacing(50);
+				background: #C2AC32;
+				color: #fff;
+				text-align: center;
+				margin: -88px 0 50px;
+			}
+			&__sub{
+				margin-bottom: 50px;
+				font-size: 20px;
+				line-height: 41px;
+				@include letter-spacing(50);
+			}
+			&__excerpt{
+				position: relative;
+				left: -50px;
+				width: calc(100% + 50px);
+			}
+			&__text{
+				font-family: "丸明Katura StdN R";
+				font-size: 27px;
+				line-height: 41px;
+				color: #C2AC32;
+				@include letter-spacing(47);
+			}
+		}
+		.ul__number{
+			counter-reset: ul-counter;
+			li{
+				position: relative;
+				padding-left: 25px;
+				&::before {
+					counter-increment: ul-counter;
+  					content: counter(ul-counter);
+  					position: absolute;
+  					top: 8px;
+  					left: 0;
+  					display: inline-block;
+  					width: 20px;
+  					line-height: 20px;
+  					line-height: 20px;
+  					background: #C2AC32;
+  					border-radius: 50%;
+  					color: #fff;
+  					font-size: 12px;
+  					text-align: center;
+				}
+			}
+		}
+	}
+
+	@media ( max-width: 1399px ) {
+		&-about{
+			.el-item__title {
+			    font-size: 28px;
+			    line-height: 38px;
+			}
+			.el-item__label{
+				margin: -22px 16px 0 -75px;
+			}
+
+		}
+		&-fluorine{
+			.el-box__title {
+			    font-size: 28px;
+			}
+		}
+	}
+	@media ( max-width: 1199px ) {
+		&-about {
+		    padding: 100px 0 80px;
+		}
+		&-conditions{
+    		padding: 80px 0 20px;
+
+			.el__excerpt {
+			    font-size: 20px;
+			}
+		}
+		&-eating {
+		    padding: 80px 0 20px;
+		}
+		&-fluorine {
+		    padding: 80px 0 160px;
+		   .el-box__sub {
+			    font-size: 18px;
+			    line-height: 36px;
+			}
+		}
+	}
+	@media ( max-width: 991px ) {
+		&-about{
+			padding: 80px 0;
+			.el-item__label {
+			    margin: 0;
+			}
+
+		}
+		&-fluorine{
+			.el-box {
+			    padding: 50px 80px;
+			}
+			.el-box__excerpt {
+			    left: 0;
+			    width: 100%;
+			}
+		}
+	}
+	@media ( max-width: 767px ) {
+		&-about{
+			padding: 60px 20px;
+			.el-item__title {
+			    font-size: 26px;
+			}
+			.el-item__label {
+			    position: absolute;
+			    top: 10px;
+			    left: 10px;
+			    min-width: 160px;
+			    padding: 4px 10px;
+			}
+			.el-item:not(:last-child) {
+			    margin-bottom: 40px;
+			}
+		}
+		&-conditions {
+		    padding: 60px 0 20px;
+		    .el-item {
+			    width: 246px;
+			    height: 246px;
+			    padding: 20px 16px;
+			}
+			.el-item__title {
+			    font-size: 26px;
+			    line-height: 30px;
+			}
+			.el-item__excerpt {
+			    font-size: 14px;
+			    line-height: 26px;
+			}
+			.el__excerpt {
+			    font-size: 18px;
+			    line-height: 30px;
+			}
+		}
+		&-fluorine{
+    		padding: 60px 0 120px;
+			.el-box {
+			    padding: 50px 60px;
+			}
+		}
+		&-eating {
+		    padding: 60px 0 20px;
+		}
+	}
+	@media ( max-width: 575px ) {
+		&-about{
+			.el-items {
+			    padding: 0;
+			}
+			.el-item__title {
+			    font-size: 22px;
+			}
+			.el-item__excerpt {
+			    font-size: 14px;
+			    line-height: 30px;
+			}
+			.el-item__label {
+			    min-width: 140px;
+			    padding: 2px 10px;
+			}
+		}
+		&-conditions{
+			.el__title {
+			    font-size: 18px;
+			    line-height: 32px;
+			}
+		}
+		&-fluorine{
+			.el-box {
+			    padding: 50px 20px;
+			}
+			.el-box__title {
+			    font-size: 24px;
+			    line-height: 55px;
+			}
+			.el-box__text {
+			    font-size: 22px;
+			    line-height: 36px;
+			}
+			.ul__number {
+			    font-size: 14px;
+			    line-height: 30px;
+			    li {
+				    margin-bottom: 5px;
+				}
+			}
+
+
+		}
+	}
+
+
+}

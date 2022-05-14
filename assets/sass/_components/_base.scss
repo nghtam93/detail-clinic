@@ -9,7 +9,7 @@ $color_secondary: #FF6B1D;
 }
 
 body{
-    color:#5C504B;font:14px/1.8 'Noto Sans JP', sans-serif;
+    color:#5C504B;font:16px/34px 'Noto Sans JP', sans-serif;
     --header-height:86px;
     --container: 1224px;
     --container-space: calc( (100vw - var(--container) ) );
@@ -35,7 +35,9 @@ a:hover{text-decoration:none;}
 img{
     max-width: 100%;
 }
-
+.vertical-rl{
+    writing-mode: vertical-rl;
+}
 
 /**/
 .videoWrapper{position:relative;padding-bottom:56.25%; /* 16:9 */height:0;}
@@ -175,6 +177,12 @@ img{
     }
     .col-lg-45{
         width: 45%;
+    }
+    .col-lg-46{
+        width: 46%;
+    }
+    .col-lg-54{
+        width: 54%;
     }
     .col-lg-55{
         width: 55%;

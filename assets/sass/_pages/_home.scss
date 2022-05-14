@@ -43,6 +43,7 @@
           justify-content: center;
             padding: 0 0.75rem;
 			&__box{
+				font-family: "丸明Katura StdN R";
 				max-width: 830px;
 				text-align: center;
 				margin: 70px auto 140px;
@@ -71,13 +72,13 @@
 				}
 			}
 			&__title{
+				font-family: "丸明Katura StdN R";
 				display: flex;
     			align-items: center;
     			justify-content: center;
     			flex-wrap: wrap;
-				font-size: 49px;
-				line-height: 74px;
-				letter-spacing: 10px;
+				  font-size: 60px;
+    			line-height: 90px;
 				color: #fff;
 				margin-bottom: 15px;
 				text-shadow: 0 0 6px rgba(0, 0, 0, .4 );
@@ -88,8 +89,9 @@
 			  	}
 			}
 			&__sub{
-				font-size: 57px;
-				line-height: 60px;
+				font-family: "丸明Katura StdN R";
+				font-size: 75px;
+    		line-height: 80px;
 				font-weight: 500;
 				color: #fff;
 				text-shadow: 0 0 6px rgba(0, 0, 0, .8 );
@@ -215,6 +217,7 @@
 		}
 
 		&__center{
+			font-family: "丸明Katura StdN R";
 			position: absolute;
 		    bottom: 140px;
 		    left: 0;
@@ -224,7 +227,7 @@
 		    margin: 0 auto;
 		    z-index: 2;
 		    .el-header, .el-content{
-		    	padding: 11px 20px;
+		    	padding: 10px 20px;
 		    }
 		    .el-header{
 		    	display: flex;
@@ -242,6 +245,7 @@
 		    	display: flex;
     			align-items: center;
 		    	font-size: 14px;
+		    	line-height: 22px;
 		    	color: #5C504B;
 		    	background-color: rgba(255, 255, 255, .8);
 		    }
@@ -850,9 +854,10 @@
 			position: relative;
 		}
 		.sc-header__sub{
-			width: 54px;
-		    margin: 0 50px 0 0;
-		    writing-mode: vertical-rl;
+		    &.vertical-rl{
+		    		width: 54px;
+		    		margin: 0 50px 0 0;
+		    }
 		}
 		.sc-content{
 			position: relative;
@@ -1360,8 +1365,27 @@
 			    font-size: 35px;
 			    line-height: 36px;
 			}
+
 		}
 		&-slider{
+
+			&__top{
+				.logo__text--1 {
+				    font-size: 20px;
+				}
+				.logo__text--2 {
+				    font-size: 26px;
+				    margin-bottom: 5px;
+				}
+
+				.el-info {
+				    font-size: 14px;
+				    a {
+						    font-size: 36px;
+						    line-height: 36px;
+						}
+				}
+			}
 			.static-banner {
 			    top: 50px;
 			}
@@ -1374,12 +1398,12 @@
 			}
 
 			.static-banner__title {
-			    font-size: 38px;
-			    line-height: 66px;
+			    font-size: 48px;
+    			line-height: 70px;
 			}
 			.static-banner__sub {
-			    font-size: 46px;
-			    line-height: 60px;
+			  font-size: 60px;
+    		line-height: 70px;
 			}
 			&__right {
 			    top: 150px;
@@ -1550,16 +1574,17 @@
 			    width: 100%;
 			    max-width: 360px;
 			    background: rgba(0, 0, 0, .2);
-    			min-height: 130px;
+    			min-height: 140px;
     			padding: 10px;
 			}
 			.el-info{
 			    right: 50.5%;
 			    font-size: 12px;
-			    .el-info__text {
-				    font-size: 14px;
-				    margin-right: 8px;
-				}
+			    line-height: 20px;
+			    &__text {
+					    font-size: 14px;
+					    margin-right: 8px;
+					}
 			   	a {
 				    font-size: 36px;
 				    line-height: 42px;
@@ -1584,7 +1609,7 @@
 				    max-width: 730px;
 				    display: flex;
 				    gap: 15px;
-				    align-items: start;
+				    align-items: center;
 				    margin: 0;
 				    &__group {
 					    max-width: 180px;
@@ -1604,6 +1629,8 @@
 				}
 				.el-access{
 					margin-left: auto;
+					font-size: 14px;
+    			line-height: normal;
 					&__header {
 					    margin-bottom: 10px;
 					}
@@ -1787,13 +1814,13 @@
 			    margin: 0 0 40px;
 			}
 			.sc-header__sub {
-			    width: 50px;
-			    margin: 0 30px 0 0;
+
+			    &.vertical-rl{
+			    	width: 50px;
+			    	margin: 0 30px 0 0;
+			    }
 			}
-			.el-box__title {
-			    font-size: 20px;
-			    margin-bottom: 18px;
-			}
+
 			.el-box__excerpt {
 				font-size: 14px;
 			    padding-right: 0;
@@ -1847,7 +1874,7 @@
 			}
 			.el-info, .schedule {
 				max-width: 273px;
-			    top: 425px;
+			    top: 436px;
 			}
 			.el-info{
 				a {
@@ -1881,13 +1908,29 @@
 		&-philosophy {
 		    padding: 60px 0;
 		    .el-box {
-			    padding: 40px 0;
-			}
-			.el-box__thumb {
-			    width: 100%;
+				    padding: 40px 0;
+				    + .el-box{
+				    	margin-top: 20px;
+				    }
+				    &:nth-child(even){
+					    	.el-box__thumb {
+									top: 60%;
+							    width: 60%;
+							    height: 50%;
+							    &.-large {
+								    top: -10%;
+								    width: 60%;
+								}
+					    }
+					  }
+				}
+				.el-box__thumb {
+					top: -10%;
+			    width: 60%;
 			    height: 50%;
 			    &.-large {
-				    top: 50%;
+				    top: 60%;
+				    width: 60%;
 				}
 			}
 		}
@@ -1916,6 +1959,9 @@
 		}
 		&-greeting {
 		    padding: 60px 0;
+		    .sc-content__thumb {
+				    top: -30px;
+				}
 		}
 		&-clinic .sc-wrap {
 		    padding: 60px 0;
@@ -1985,9 +2031,16 @@
 				min-height: auto;
 			}
 			.el-info {
-				.el-info a {
-				    margin: 0;
-				}
+				text-align: center;
+					a {
+					    margin: 0;
+					}
+			    &__phone{
+			    		max-width: 248px;
+  						margin: auto;
+			    }
+
+
 			}
 			.schedule{
 				top: 550px;
@@ -1996,6 +2049,7 @@
 				display: block;
 			    top: 685px;
 			    .el-social {
+			    	justify-content: center;
 				    margin-bottom: 6px;
 				}
 			}
@@ -2012,8 +2066,11 @@
 			}
 		}
 		&-greeting{
+			.sc-content__bg {
+			    width: 100%;
+			}
 			.el-box {
-			    padding: 30px 20px 30px 0px;
+			    padding: 30px 20px;
 			    max-width: 100%;
 			}
 			.el-profile {
@@ -2044,6 +2101,11 @@
 			}
 		}
 		&-philosophy{
+			.el-box{
+				+ .el-box{
+					margin-top: 20px;
+				}
+			}
 			.el-item{
 				display: block;
 				.el-item__title {
@@ -2066,11 +2128,14 @@
 			.sc-content__thumb {
 			    position: relative;
 			    top: 0;
-			    width: 50%;
+			    width: 100%;
 			    margin: 0 0 15px auto;
 			}
 			.sc-header__sub {
-			    margin: 0 16px 0 0;
+
+			    &.vertical-rl{
+			    	margin: 0 16px 0 0;
+			    }
 			}
 			.el-box__ruby {
 			    font-size: 14px;
@@ -2109,6 +2174,21 @@
 			.el-info a {
 			    font-size: 28px;
 			}
+		}
+		&-clinic{
+			.el-slider{
+				&__wrap{
+					width: calc(100% - 1.5rem);
+					&.is-selected .el-slider__item {
+				    transform: scale(1);
+					}
+				}
+				&__item {
+				    transform: scale(1);
+				}
+
+			}
+
 		}
 	}
 	@media screen and (min-width: 576px) and (max-width: 1199px) {

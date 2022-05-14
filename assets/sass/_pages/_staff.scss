@@ -259,6 +259,7 @@
 			    padding: 60px 0 100px 80px;
 			}
 			.el__ruby {
+				    width: 100%;
 			    left: 0;
 			}
 		}
@@ -421,8 +422,10 @@
 	@media (max-width:575px){
 		&-getting{
 			.el__info {
-			    padding: 40px 100px 60px 0px;
+			    padding: 30px 40px 60px 0px;
+			   	margin-bottom: -20px;
 			    &:before {
+			    	width: 100%;
 				   left: -0.75rem;
 				}
 			}

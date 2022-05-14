@@ -1,11 +1,14 @@
-
 /*Effect*/
 [data-animate]{will-change:filter,transform,opacity;-webkit-backface-visibility:hidden;animation-fill-mode:forwards;opacity:1!important;transition:filter 1.3s,transform 1.6s,opacity 0.7s ease-in}
-.slider .is-selected [data-animated="true"]{animation-delay:2s;transform:translate3d(0,0,0) scale(1.2);opacity:1!important;transition: transform 10s ease-in-out;}
-.flickity-slider>*:not(.is-selected) [data-animated="true"]{transition:opacity 0.3s!important}
+.slider [data-animated="true"]{transform:translate3d(0,0,0) scale(1.2);}
+.slider .is-selected [data-animated="true"]{animation:anime 6s ease-in-out;}
+.flickity-slider>*:not(.is-selected) [data-animated="true"]{transition:opacity 0.5s!important}
 .slider [data-animate="none"]{opacity:1!important}
 [data-animated="false"]{transition:none!important}
-
+@keyframes anime{
+    0%{transform:scale(1);}
+    100%{transform:scale(1.2);}
+}
 @keyframes stuckMoveDown{
     0%{transform:translateY(-100%)}
     100%{transform:translateY(0)}
@@ -27,7 +30,6 @@
 @keyframes shine{
     100%{left:125%}
 }
-
 .ef--flashing:hover .dnfix__thumb img{opacity:1;-webkit-animation:flash 3s;animation:flash 3s}
 @-webkit-keyframes flash{
     0%{opacity:.5}
