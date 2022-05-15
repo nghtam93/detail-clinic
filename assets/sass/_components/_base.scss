@@ -161,6 +161,12 @@ img{
     .col-sm-40{
         width: 40%;
     }
+
+}
+@media (min-width:768px){
+    .gx-md-100{
+        --bs-gutter-x: 100px;
+    }
 }
 @media (min-width:992px){
     .col-lg-14{
@@ -192,6 +198,9 @@ img{
     }
     .gx-lg-50{
         --bs-gutter-x: 50px;
+    }
+    .gx-lg-100{
+        --bs-gutter-x: 100;
     }
 }
 @media (min-width: 1200px){

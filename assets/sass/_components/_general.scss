@@ -593,7 +593,7 @@ table{
     }
 
     @media ( max-width: 575px ) {
-        table.-s1 {
+        &.-s1 {
             font-size: 14px;
             line-height: 24px;
         }
@@ -772,16 +772,20 @@ table{
             padding: 40px 20px;
             font-size: 14px;
             line-height: 26px;
-            li:before {
-                width: 20px;
-                height: 20px;
+            li {
+                padding-left: 30px;
+                &:before {
+                    width: 20px;
+                    height: 20px;
+                }
+                &:after {
+                    top: 4px;
+                    left: 5px;
+                    width: 14px;
+                    height: 16px;
+                }
             }
-            li:after {
-                top: 4px;
-                left: 5px;
-                width: 14px;
-                height: 16px;
-            }
+
         }
 
     }
