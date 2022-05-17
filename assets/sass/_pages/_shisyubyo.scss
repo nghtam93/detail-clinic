@@ -1,0 +1,247 @@
+.shisyubyo{
+	&-intro{
+		.sc-wrap {
+		    padding: 80px 0 20px;
+		}
+		.el__listcheck{
+			&:before {
+			    border-color: #D1B828;
+			}
+			li:before {
+			    background: #EDE2A9;
+			}
+		}
+	}
+
+	&-what{
+		padding: 100px 0 120px;
+		.el-item{
+			margin-bottom: 80px;
+		}
+		.el-box{
+			padding: 50px 70px;
+			background: #FFFCE9;
+			margin-bottom: 60px;
+			&__title{
+				font-size: 36px;
+				line-height: 59px;
+				color: #C2AC32;
+				margin-bottom: 30px;
+				@include letter-spacing(50);
+			}
+			&__excerpt{
+				margin-bottom: -20px;
+				p{
+					margin-bottom: 20px;
+				}
+				ul{
+					font-size: 24px;
+					line-height: 45px;
+					@include letter-spacing(50);
+					margin: 0 0 20px 60px;
+					li{
+						position: relative;
+						padding-left: 26px;
+						&:before{
+							content: '';
+							position: absolute;
+							top: 14px;
+							left: 0;
+							display: inline-block;
+							margin-right: 5px;
+							width: 20px;
+							height: 20px;
+							border-radius: 50%;
+							background: #D1B828;
+						}
+					}
+				}
+			}
+		}
+		.el__text{
+			font-size: 30px;
+			line-height: 58px;
+			@include letter-spacing(50);
+		}
+	}
+
+	&-contents{
+		padding: 40px 0;
+		background: #E6D889;
+	}
+
+	&-laser{
+		padding: 80px 0 60px;
+		.el-item{
+			margin-bottom: 70px;
+		}
+		.el__text{
+			font-family: "丸明Katura StdN R";
+			font-size: 36px;
+			line-height: 63px;
+			@include letter-spacing(50);
+			margin-bottom: 40px;
+		}
+		.el-item2{
+			width: 100%;
+			padding: 30px 20px;
+			text-align: center;
+			background: #FCFAEB;
+			&__number{
+				width: 66px;
+				margin: 0 auto;
+				font-size: 36px;
+				line-height: 34px;
+				border-bottom: 1px dashed;
+				@include letter-spacing(50);
+				padding-bottom: 10px;
+				margin-bottom: 20px;
+			}
+			&__title{
+				font-family: "丸明Katura StdN R";
+				font-size: 30px;
+				line-height: 45px;
+				color: #D1B828;
+				@include letter-spacing(50);
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&-perisolv{
+		padding: 20px 0 0;
+	}
+	&-brushing{
+		padding: 100px 0 60px;
+	}
+
+	&-maintenance{
+		padding: 100px 0 140px;
+	}
+
+	@media ( max-width: 1399px ) {
+		&-what {
+		    padding: 100px 0;
+		}
+	}
+	@media ( max-width: 1199px ) {
+
+		&-what{
+    		padding: 80px 0;
+
+			.el-box__title {
+			    font-size: 26px;
+    			line-height: 44px;
+			}
+			.el-box__excerpt ul {
+			    font-size: 20px;
+			}
+			.el__text {
+			    font-size: 26px;
+			    line-height: 44px;
+			}
+		}
+		&-laser{
+    		padding: 80px 0 20px;
+
+			.el__text {
+			    font-size: 30px;
+			    line-height: 48px;
+			}
+		}
+		&-perisolv {
+		    padding: 0;
+		}
+		&-brushing {
+		    padding: 80px 0 20px;
+		}
+		&-maintenance {
+		    padding: 80px 0 120px;
+		}
+	}
+	@media ( max-width: 991px ) {
+		&-what{
+			.el-box {
+			    padding: 50px;
+			}
+			.el-box__excerpt ul {
+			    font-size: 18px;
+			    line-height: 34px;
+			    margin: 0 0 20px 0px;
+			    li:before {
+				    top: 10px;
+				    width: 16px;
+				    height: 16px;
+				}
+			}
+			.el__text {
+			    font-size: 22px;
+			    line-height: 40px;
+			}
+		}
+		&-laser{
+			.el__text {
+			    font-size: 24px;
+			    line-height: 40px;
+			}
+			.el-item2__title {
+			    font-size: 20px;
+			    line-height: 34px;
+			}
+		}
+	}
+
+	@media ( max-width: 767px ) {
+
+		&-what{
+    		padding: 60px 0 40px;
+			.el-item {
+			    margin-bottom: 40px;
+			}
+		}
+		&-laser {
+		    padding: 60px 0 0px;
+		    .el__text {
+			    font-size: 22px;
+			    line-height: 34px;
+			}
+			.el-item2__excerpt {
+			    font-size: 14px;
+			    line-height: 28px;
+			}
+		}
+		&-brushing {
+		    padding: 60px 0 20px;
+		}
+		&-maintenance {
+		    padding: 60px 0;
+		}
+
+	}
+	@media ( max-width: 575px ) {
+		&-intro{
+			.sc-wrap {
+			    padding: 40px 0 20px;
+			}
+		}
+		&-what{
+			.el-box {
+			    padding: 40px 20px;
+			    &__title {
+				    font-size: 20px;
+				    line-height: 34px;
+				}
+			}
+			.el__text {
+			    font-size: 20px;
+			    line-height: 36px;
+			}
+		}
+		&-laser{
+			.el-item {
+			    margin-bottom: 40px;
+			}
+		}
+
+	}
+}
